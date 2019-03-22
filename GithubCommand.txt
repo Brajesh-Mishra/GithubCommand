@@ -14,17 +14,19 @@ command:git pull origin master
 5.there is a layer in between our workspace or local repo so we need to first add files to index layer then we will  commit to local repo
 
 command git status(used to saw which file is added to index layer or which are not)
-command git add file.txt(used to add files to index layer or we can also use (git add * or git add -A same with all command  )it will add all files )
+command git add file.txt(used to add files to index layer or we can also use (git add * or git add -A same with all command or git commit .(dot for all files) )it will add all files )
 
 6.commit to local repo
 
 command:git commit -m "commment"(commit to local repo -m flag is used to give message)
 
-7.git log(To saw the log )
+7.git log(To saw the log or we can also use -before='date' or -- author='name 'or --oneline )
 
 8.create a branch
 
 command:git branch BranchName(when we create branch from master branch . bash prompt after crerting branch it will prompt in master branch we have to swicth to branch we have created)
+
+ShortCut:command: git chcekout -b branchname (create th ebranch and switch to it )
 
 command:git checkout branchName(switch to oarticukar branch)
 
@@ -39,12 +41,29 @@ command:ssh-keygen(prompt to y/n and genrate ta file copy the path and saw using
 12.if we want to push the chnages in localrepo to github repo 
 command:git push originbranchName (if branch exist in local repo it will create the branch in remote repo)
 
-13.we can rollback to previous version first we have to give command: git log (from here we have to copy the first 8bit of hashcode of various chnages)then
-command :git checkout hashcode filename.txt(name of file in whcih we have done the changes) 
+13.we can rollback to previous version first we have to give
+
+command: git log (from here we have to copy the first 8bit of hashcode of various chnages)then
+command :git revert hashcode (or we can return to before last commit using git commit HEAd) 
 
 
+Second lacture
+14.git branch(from master branch prompt gives all branches names )
 
+
+15.git diff(diff between thw working file and the commited file in local repo)
 ....******
 if we added a file in index layer and then we have updated the file and again we want to commit the changes we have not to again add file into index layer it will automatically add if we commit the files 
 
+16.create a stash 
+command:git stash save "comment"(it will create a stash its like a savepoint in oracle sql that can be apllied to branch and note the stash id )
+and 
+command:git stash apply stashId(it will aplly the stash to particukar branch from which we are applying it )
+17.git stash list(give list of all stash avilable)
+
+18. delete the branch 
+git branch -d branchName (delete the branch)
+
+
+19. command:git clone "ssh link"(download the whole project )
 ---diff between git pull and git fetch (git pull= gitfetch +git merge here git fetch will create a new branch in local repo)
