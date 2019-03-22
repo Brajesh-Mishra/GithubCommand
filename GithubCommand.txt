@@ -1,26 +1,44 @@
 1.first create a repo in github
 2.create a local repo(on your system) and create a folder right click git bash here and 
+
 command: git init(create a .git folder in it )and then 
+
 3.connect your remote repo to local repo 
-command: git remote add origin "https link from clone the repo in github"(this will link your remote repo to treminal means whatever the operation performed through git bash are shown in that particular remote repo and local repo )
+
+command: git remote add origin "https link from clone the repo in github"(this will link your remote repo to terminal means whatever the operation performed through git bash are shown in that particular remote repo and local repo )
+
 4.pull the files form remote repo
+
 command:git pull origin master
+
 5.there is a layer in between our workspace or local repo so we need to first add files to index layer then we will  commit to local repo
+
 command git status(used to saw which file is added to index layer or which are not)
 command git add file.txt(used to add files to index layer or we can also use (git add * or git add -A same with all command  )it will add all files )
+
 6.commit to local repo
+
 command:git commit -m "commment"(commit to local repo -m flag is used to give message)
+
 7.git log(To saw the log )
+
 8.create a branch
+
 command:git branch BranchName(when we create branch from master branch . bash prompt after crerting branch it will prompt in master branch we have to swicth to branch we have created)
+
 command:git checkout branchName(switch to oarticukar branch)
+
 9.git merge branchName(from master branch in prompt we give that command it will merge into master branch)
+
 10.git rebase master(we have done the chnages in branch and we want that chnages happen in its parent branch then its parent so we use this command and here BranchName branch will be in last node of a tree)
+
 11.we do not want anybody to pull chnages to my repo so we will create ssh key to authenticate the user who can do the chnages 
 take the ssh url from repo cloning
-command:ssh-keyger(prompt to y/n and genrate ta file copy the path and saw using cat command )the in github setting and the ssh key and then from bash prompt command: ssh -T git@github.com
+command:ssh-keygen(prompt to y/n and genrate ta file copy the path and saw using cat command )the in github setting and the ssh key and then from bash prompt command: ssh -T git@github.com
+
 12.if we want to push the chnages in localrepo to github repo 
 command:git push originbranchName (if branch exist in local repo it will create the branch in remote repo)
+
 13.we can rollback to previous version first we have to give command: git log (from here we have to copy the first 8bit of hashcode of various chnages)then
 command :git checkout hashcode filename.txt(name of file in whcih we have done the changes) 
 
