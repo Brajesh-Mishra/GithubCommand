@@ -1,4 +1,5 @@
 1.first create a repo in github
+
 2.create a local repo(on your system) and create a folder right click git bash here and 
 
 command: git init(create a .git folder in it )and then 
@@ -32,19 +33,16 @@ command:git checkout branchName(switch to oarticukar branch)
 
 9.git merge branchName(from master branch in prompt we give that command it will merge into master branch)
 
-10.git rebase master(we have done the chnages in branch and we want that chnages happen in its parent branch then its parent so we use this command and here BranchName branch will be in last node of a tree)
+10.git rebase branchname(we have done the chnages in branch and we want that chnages happen in its sub  branch automatically ,so we use this command and here BranchName branch will be in head node of a tree and from which branch we are prompt is sub of it)
 
-11.we do not want anybody to pull chnages to my repo so we will create ssh key to authenticate the user who can do the chnages 
-take the ssh url from repo cloning
-command:ssh-keygen(prompt to y/n and genrate ta file copy the path and saw using cat command )the in github setting and the ssh key and then from bash prompt command: ssh -T git@github.com
 
 12.if we want to push the chnages in localrepo to github repo 
-command:git push originbranchName (if branch exist in local repo it will create the branch in remote repo)
+command:git push originbranchName (if branch exist in local repo it will create the branch in remote repo or git push -u origin master ask for username and password)
 
 13.we can rollback to previous version first we have to give
 
 command: git log (from here we have to copy the first 8bit of hashcode of various chnages)then
-command :git revert hashcode (or we can return to before last commit using git commit HEAd) 
+command :git revert hashcode (or we can return to before last commit using git commit HEAD) 
 
 
 Second lacture
@@ -60,6 +58,7 @@ command:git stash save "comment"(it will create a stash its like a savepoint in 
 and 
 command:git stash apply stashId(it will aplly the stash to particukar branch from which we are applying it )
 17.git stash list(give list of all stash avilable)
+  git stash shoe(more about stash)
 
 18. delete the branch 
 git branch -d branchName (delete the branch)
@@ -67,3 +66,18 @@ git branch -d branchName (delete the branch)
 
 19. command:git clone "ssh link"(download the whole project )
 ---diff between git pull and git fetch (git pull= gitfetch +git merge here git fetch will create a new branch in local repo)
+
+
+20.connect through ssh 
+      Genrate a ssh key and add it to github: 
+      so we will create ssh key to authenticate the user who can do the chnages take the ssh url from repo cloning
+
+command:ssh-keygen(prompt to y/n and genrate ta file copy the path and saw using cat command )the in github setting and the ssh key and then from bash prompt command: ssh -T git@github.com
+
+
+21.git config (there are many configuration setting it show how to assign these setting)
+    we can do it globally or local to the repo 
+    Globally :command:git config --global user.name "githubusername"(then enter and again for password)git config --global user.email     "emailof user" "githubusername"(enter)
+    
+22. git log 
+  gitlog --oneline
