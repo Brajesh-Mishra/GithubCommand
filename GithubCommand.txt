@@ -79,5 +79,6 @@ command:ssh-keygen(prompt to y/n and genrate ta file copy the path and saw using
     we can do it globally or local to the repo 
     Globally :command:git config --global user.name "githubusername"(then enter and again for password)git config --global user.email     "emailof user" "githubusername"(enter)
     
-22. git log 
+22. git log RAHUL VARSHNEY
+
   gitlog --oneline
