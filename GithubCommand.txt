@@ -79,6 +79,16 @@ command:ssh-keygen(prompt to y/n and genrate ta file copy the path and saw using
     we can do it globally or local to the repo 
     Globally :command:git config --global user.name "githubusername"(then enter and again for password)git config --global user.email     "emailof user" "githubusername"(enter)
     
-22. git log RAHUL VARSHNEY
+22. git log 
 
   gitlog --oneline
+
+
+23.merge conflict(how to solve it )
+  1.centralized merge(there a repo 2 person have pulll that repo and 1 chnaged it and push but the other person don't know about that so   that create a conflict when the second user push own code so to resolve it use )
+  command:git pull --rebase origin master
+  or then we can saw the conflict using git status
+  then 
+  command :git mergetool
+  git rebase --continue
+  
